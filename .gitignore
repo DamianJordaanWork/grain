@@ -47,5 +47,6 @@ app.*.map.json
 # Sensitive credentials
 lib/config/app_config.dart
 harvest_postman_collection_2.json
-.claude/
 .worktrees/
+.claude/settings.local.json
+.claude/settings.json
