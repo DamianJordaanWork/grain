@@ -297,6 +297,7 @@ class _LogTimeScreenState extends State<LogTimeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final palette = HarvestTokens.of(context);
     final assignments = context.watch<AssignmentProvider>();
     final entryProvider = context.watch<TimeEntryProvider>();
 
@@ -355,7 +356,7 @@ class _LogTimeScreenState extends State<LogTimeScreen> {
                 if (_useStartEndTime) _initStartEndDefaults();
               },
               style: SegmentedButton.styleFrom(
-                selectedBackgroundColor: HarvestTokens.brandTint,
+                selectedBackgroundColor: palette.brandTint,
                 selectedForegroundColor: HarvestTokens.brand600,
               ),
             ),

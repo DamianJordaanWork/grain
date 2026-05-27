@@ -40,6 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final palette = HarvestTokens.of(context);
     return LayoutBuilder(
       builder: (context, constraints) {
         final wide = constraints.maxWidth >= HarvestTokens.kWideBreakpoint;
@@ -52,7 +53,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   selectedIndex: _tab,
                   onDestinationSelected: (i) => setState(() => _tab = i),
                   labelType: NavigationRailLabelType.all,
-                  indicatorColor: HarvestTokens.brandTint,
+                  indicatorColor: palette.brandTint,
                   selectedIconTheme:
                       const IconThemeData(color: HarvestTokens.brand),
                   selectedLabelTextStyle: const TextStyle(
